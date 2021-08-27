@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.mapzen.android.graphics.MapFragment2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:overlayMode="classic" />
+    <TextView
+        android:id="@+id/remove_all_marker"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Remove All Marker"
+        android:gravity="center"
+        android:paddingHorizontal="8dp"
+        android:onClick="removeAllMarker"
+        android:background="#cccccc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"/>
+    <TextView
+        android:id="@+id/add_marker_bitmap"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Add Bitmap Marker"
+        android:gravity="center"
+        android:paddingHorizontal="8dp"
+        android:onClick="bitmapMarker"
+        android:background="#cccccc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/remove_all_marker"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/add_marker"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:paddingHorizontal="8dp"
+        android:text="Add Marker"
+        android:gravity="center"
+        android:onClick="marker"
+        android:background="#cccccc"
+        app:layout_constraintTop_toBottomOf="@id/add_marker_bitmap"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/plan_route"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:paddingHorizontal="8dp"
+        android:text="Plan Route"
+        android:gravity="center"
+        android:onClick="planRoute"
+        android:background="#cccccc"
+        app:layout_constraintTop_toBottomOf="@id/add_marker"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/start_navi"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:paddingHorizontal="8dp"
+        android:text="Plan Route"
+        android:gravity="center"
+        android:onClick="startNavi"
+        android:background="#cccccc"
+        app:layout_constraintTop_toBottomOf="@id/plan_route"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
